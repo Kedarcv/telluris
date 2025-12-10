@@ -1,0 +1,297 @@
+2025-11-19 22:55:34,236 - __main__ - INFO - 🎯 Enhanced Mining Vision System Launcher
+2025-11-19 22:55:34,236 - __main__ - INFO - ============================================================
+2025-11-19 22:55:34,280 - __main__ - INFO - ✅ opencv-python is available
+2025-11-19 22:55:34,640 - __main__ - INFO - ✅ ultralytics is available
+2025-11-19 22:55:34,640 - __main__ - INFO - ✅ numpy is available
+2025-11-19 22:55:34,641 - __main__ - INFO - ✅ pyttsx3 is available
+2025-11-19 22:55:34,870 - __main__ - INFO - ✅ google-generativeai is available
+2025-11-19 22:55:34,870 - __main__ - INFO - ✅ websockets is available
+2025-11-19 22:55:34,870 - __main__ - INFO - 🔧 Checking environment configuration...
+2025-11-19 22:55:34,870 - __main__ - INFO - ✅ Gemini API key configured (length: 39)
+2025-11-19 22:55:35,584 - __main__ - INFO - ✅ Camera is available
+2025-11-19 22:55:35,638 - __main__ - INFO - 🚗 Starting mock ESP32 server...
+2025-11-19 22:55:35,640 - __main__ - INFO - ✅ Mock ESP32 server started on ws://localhost:8080/esp32
+2025-11-19 22:55:35,640 - mock_esp32 - INFO - 🚀 Starting Enhanced Mock ESP32 server on localhost:8080
+2025-11-19 22:55:35,647 - websockets.server - INFO - server listening on [::1]:8080
+2025-11-19 22:55:35,647 - websockets.server - INFO - server listening on 127.0.0.1:8080
+2025-11-19 22:55:35,647 - mock_esp32 - INFO - ✅ Enhanced Mock ESP32 server running on ws://localhost:8080/esp32
+2025-11-19 22:55:35,647 - mock_esp32 - INFO - 🎮 Server capabilities:
+2025-11-19 22:55:35,647 - mock_esp32 - INFO -    - Enhanced navigation commands
+2025-11-19 22:55:35,647 - mock_esp32 - INFO -    - Obstacle avoidance simulation
+2025-11-19 22:55:35,647 - mock_esp32 - INFO -    - Real-time vehicle state tracking
+2025-11-19 22:55:35,647 - mock_esp32 - INFO -    - Emergency stop protocols
+2025-11-19 22:55:37,641 - __main__ - INFO - 🚀 Initializing Enhanced Mining Vision System...
+2025-11-19 22:55:38,523 - optimized_live_api_vision - INFO - ✅ Camera initialized with optimized settings
+2025-11-19 22:55:38,646 - optimized_live_api_vision - INFO - ✅ YOLO model optimized for fast inference
+2025-11-19 22:55:38,646 - optimized_live_api_vision - INFO - ✅ Gemini AI initialized
+2025-11-19 22:55:39,548 - optimized_live_api_vision - INFO - ✅ TTS engine initialized
+2025-11-19 22:55:39,549 - __main__ - INFO - 🎥 Vision system initialized successfully
+2025-11-19 22:55:39,549 - __main__ - INFO - 📊 Performance optimizations:
+2025-11-19 22:55:39,549 - __main__ - INFO -    - Target FPS: 20
+2025-11-19 22:55:39,549 - __main__ - INFO -    - Frame skip: 1
+2025-11-19 22:55:39,549 - __main__ - INFO -    - Detection confidence: 0.5
+2025-11-19 22:55:39,549 - __main__ - INFO -    - Gemini call interval: 0.5s
+2025-11-19 22:55:39,549 - __main__ - INFO - 
+2025-11-19 22:55:39,549 - __main__ - INFO - 🎮 Controls:
+2025-11-19 22:55:39,549 - __main__ - INFO -    - Press 'q' to quit
+2025-11-19 22:55:39,549 - __main__ - INFO -    - System will provide audio feedback
+2025-11-19 22:55:39,549 - __main__ - INFO - ============================================================
+2025-11-19 22:55:39,549 - optimized_live_api_vision - INFO - 🚀 Starting enhanced mining vision system with AI path planning...
+2025-11-19 22:55:39,551 - optimized_live_api_vision - INFO - 🔌 Initializing ESP32 controller...
+2025-11-19 22:55:39,551 - enhanced_esp32_controller - INFO - 🔌 Connecting to ESP32 at ws://localhost:8080/esp32
+2025-11-19 22:55:39,554 - websockets.server - INFO - connection open
+2025-11-19 22:55:39,554 - websockets.server - ERROR - connection handler failed
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/websockets/asyncio/server.py", line 376, in conn_handler
+    await self.handler(connection)
+          ~~~~~~~~~~~~^^^^^^^^^^^^
+TypeError: MockESP32Server.handle_client() missing 1 required positional argument: 'path'
+2025-11-19 22:55:39,555 - enhanced_esp32_controller - INFO - ✅ Connected to ESP32
+2025-11-19 22:55:39,556 - enhanced_esp32_controller - ERROR - ❌ Failed to send command: received 1011 (internal error); then sent 1011 (internal error)
+2025-11-19 22:55:39,556 - optimized_live_api_vision - INFO - ✅ ESP32 controller connected
+2025-11-19 22:55:39,605 - optimized_live_api_vision - INFO - 📡 ESP32 Command (offline): {
+  "command": "NORMAL_FORWARD",
+  "speed": 1.2,
+  "direction": 0.0,
+  "duration": 2.0,
+  "timestamp": 1763585739.605022
+}
+2025-11-19 22:55:39,605 - optimized_live_api_vision - INFO - 🧭 NORMAL_FORWARD | Speed: 1.2 | Direction: 0.0° | Path clear, proceeding forward
+2025-11-19 22:55:41,645 - optimized_live_api_vision - INFO - 📡 ESP32 Command (offline): {
+  "command": "NORMAL_FORWARD",
+  "speed": 1.2,
+  "direction": 0.0,
+  "duration": 2.0,
+  "timestamp": 1763585741.645453
+}
+2025-11-19 22:55:41,645 - optimized_live_api_vision - INFO - 🧭 NORMAL_FORWARD | Speed: 1.2 | Direction: 0.0° | Path clear, proceeding forward
+2025-11-19 22:55:43,648 - optimized_live_api_vision - INFO - 📡 ESP32 Command (offline): {
+  "command": "NORMAL_FORWARD",
+  "speed": 1.2,
+  "direction": 0.0,
+  "duration": 2.0,
+  "timestamp": 1763585743.648152
+}
+2025-11-19 22:55:43,648 - optimized_live_api_vision - INFO - 🧭 NORMAL_FORWARD | Speed: 1.2 | Direction: 0.0° | Path clear, proceeding forward
+2025-11-19 22:55:45,681 - optimized_live_api_vision - INFO - 📡 ESP32 Command (offline): {
+  "command": "NORMAL_FORWARD",
+  "speed": 1.2,
+  "direction": 0.0,
+  "duration": 2.0,
+  "timestamp": 1763585745.681706
+}
+2025-11-19 22:55:45,681 - optimized_live_api_vision - INFO - 🧭 NORMAL_FORWARD | Speed: 1.2 | Direction: 0.0° | Path clear, proceeding forward
+2025-11-19 22:55:47,741 - optimized_live_api_vision - INFO - 📡 ESP32 Command (offline): {
+  "command": "NORMAL_FORWARD",
+  "speed": 1.2,
+  "direction": 0.0,
+  "duration": 2.0,
+  "timestamp": 1763585747.74117
+}
+2025-11-19 22:55:47,741 - optimized_live_api_vision - INFO - 🧭 NORMAL_FORWARD | Speed: 1.2 | Direction: 0.0° | Path clear, proceeding forward
+2025-11-19 22:55:48,482 - optimized_live_api_vision - INFO - 📡 ESP32 Command (offline): {
+  "command": "EMERGENCY_STOP",
+  "speed": 0.0,
+  "direction": 0.0,
+  "duration": Infinity,
+  "timestamp": 1763585748.482048
+}
+2025-11-19 22:55:48,482 - optimized_live_api_vision - INFO - 🧭 EMERGENCY_STOP | Speed: 0.0 | Direction: 0.0° | EMERGENCY: person detected
+2025-11-19 22:56:02,269 - optimized_live_api_vision - INFO - 🛑 Shutting down mining vision system...
+2025-11-19 22:56:02,269 - enhanced_esp32_controller - INFO - 🔌 Disconnecting from ESP32
+2025-11-19 22:56:02,269 - enhanced_esp32_controller - WARNING - 🚨 EMERGENCY STOP ACTIVATED
+2025-11-19 22:56:02,269 - enhanced_esp32_controller - WARNING - ⚠️ Not connected to ESP32
+2025-11-19 22:56:02,305 - optimized_live_api_vision - INFO - ✅ Cleanup completed
+2025-11-21 18:56:38,814 - __main__ - INFO - 🎯 Enhanced Mining Vision System Launcher
+2025-11-21 18:56:38,815 - __main__ - INFO - ============================================================
+2025-11-21 18:56:40,194 - __main__ - INFO - ✅ opencv-python is available
+2025-11-21 18:56:42,366 - __main__ - INFO - ✅ ultralytics is available
+2025-11-21 18:56:42,366 - __main__ - INFO - ✅ numpy is available
+2025-11-21 18:56:42,367 - __main__ - INFO - ✅ pyttsx3 is available
+2025-11-21 18:56:43,195 - __main__ - INFO - ✅ google-generativeai is available
+2025-11-21 18:56:43,196 - __main__ - INFO - ✅ websockets is available
+2025-11-21 18:56:43,196 - __main__ - INFO - 🔧 Checking environment configuration...
+2025-11-21 18:56:43,196 - __main__ - WARNING - ⚠️ GEMINI_API_KEY environment variable not set
+2025-11-21 18:56:43,196 - __main__ - WARNING -    AI-enhanced path planning will be limited
+2025-11-21 18:56:44,163 - __main__ - INFO - ✅ Camera is available
+2025-11-21 18:56:44,224 - __main__ - INFO - 🚗 Starting mock ESP32 server...
+2025-11-21 18:56:44,225 - __main__ - INFO - ✅ Mock ESP32 server started on ws://localhost:8080/esp32
+2025-11-21 18:56:44,225 - mock_esp32 - INFO - 🚀 Starting Enhanced Mock ESP32 server on localhost:8080
+2025-11-21 18:56:44,234 - websockets.server - INFO - server listening on [::1]:8080
+2025-11-21 18:56:44,235 - websockets.server - INFO - server listening on 127.0.0.1:8080
+2025-11-21 18:56:44,235 - mock_esp32 - INFO - ✅ Enhanced Mock ESP32 server running on ws://localhost:8080/esp32
+2025-11-21 18:56:44,235 - mock_esp32 - INFO - 🎮 Server capabilities:
+2025-11-21 18:56:44,235 - mock_esp32 - INFO -    - Enhanced navigation commands
+2025-11-21 18:56:44,235 - mock_esp32 - INFO -    - Obstacle avoidance simulation
+2025-11-21 18:56:44,235 - mock_esp32 - INFO -    - Real-time vehicle state tracking
+2025-11-21 18:56:44,235 - mock_esp32 - INFO -    - Emergency stop protocols
+2025-11-21 18:56:46,226 - __main__ - INFO - 🚀 Initializing Enhanced Mining Vision System...
+2025-11-21 18:56:47,206 - optimized_live_api_vision - INFO - ✅ Camera initialized with optimized settings
+2025-11-21 18:56:47,315 - optimized_live_api_vision - INFO - ✅ YOLO model optimized for fast inference
+2025-11-21 18:56:47,315 - optimized_live_api_vision - WARNING - Gemini AI not available
+2025-11-21 18:56:48,234 - optimized_live_api_vision - INFO - ✅ TTS engine initialized
+2025-11-21 18:56:48,234 - __main__ - INFO - 🎥 Vision system initialized successfully
+2025-11-21 18:56:48,234 - __main__ - INFO - 📊 Performance optimizations:
+2025-11-21 18:56:48,234 - __main__ - INFO -    - Target FPS: 20
+2025-11-21 18:56:48,234 - __main__ - INFO -    - Frame skip: 1
+2025-11-21 18:56:48,234 - __main__ - INFO -    - Detection confidence: 0.5
+2025-11-21 18:56:48,234 - __main__ - INFO -    - Gemini call interval: 0.5s
+2025-11-21 18:56:48,234 - __main__ - INFO - 
+2025-11-21 18:56:48,234 - __main__ - INFO - 🎮 Controls:
+2025-11-21 18:56:48,234 - __main__ - INFO -    - Press 'q' to quit
+2025-11-21 18:56:48,234 - __main__ - INFO -    - System will provide audio feedback
+2025-11-21 18:56:48,234 - __main__ - INFO - ============================================================
+2025-11-21 18:56:48,234 - optimized_live_api_vision - INFO - 🚀 Starting enhanced mining vision system with AI path planning...
+2025-11-21 18:56:48,235 - optimized_live_api_vision - INFO - 🔌 Initializing ESP32 controller...
+2025-11-21 18:56:48,235 - enhanced_esp32_controller - INFO - 🔌 Connecting to ESP32 at ws://localhost:8080/esp32
+2025-11-21 18:56:48,238 - websockets.server - INFO - connection open
+2025-11-21 18:56:48,239 - websockets.server - ERROR - connection handler failed
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/websockets/asyncio/server.py", line 376, in conn_handler
+    await self.handler(connection)
+          ~~~~~~~~~~~~^^^^^^^^^^^^
+TypeError: MockESP32Server.handle_client() missing 1 required positional argument: 'path'
+2025-11-21 18:56:48,240 - enhanced_esp32_controller - INFO - ✅ Connected to ESP32
+2025-11-21 18:56:48,240 - enhanced_esp32_controller - ERROR - ❌ Failed to send command: received 1011 (internal error); then sent 1011 (internal error)
+2025-11-21 18:56:48,240 - optimized_live_api_vision - INFO - ✅ ESP32 controller connected
+2025-11-21 18:56:48,280 - optimized_live_api_vision - INFO - 📡 ESP32 Command (offline): {
+  "command": "EMERGENCY_STOP",
+  "speed": 0.0,
+  "direction": 0.0,
+  "duration": Infinity,
+  "timestamp": 1763744208.28009
+}
+2025-11-21 18:56:48,280 - optimized_live_api_vision - INFO - 🧭 EMERGENCY_STOP | Speed: 0.0 | Direction: 0.0° | EMERGENCY: person detected
+2025-11-21 18:56:52,353 - optimized_live_api_vision - INFO - 🛑 Shutting down mining vision system...
+2025-11-21 18:56:52,353 - enhanced_esp32_controller - INFO - 🔌 Disconnecting from ESP32
+2025-11-21 18:56:52,353 - enhanced_esp32_controller - WARNING - 🚨 EMERGENCY STOP ACTIVATED
+2025-11-21 18:56:52,353 - enhanced_esp32_controller - WARNING - ⚠️ Not connected to ESP32
+2025-11-21 18:56:52,390 - optimized_live_api_vision - INFO - ✅ Cleanup completed
+2025-11-21 18:57:17,858 - __main__ - INFO - 🎯 Enhanced Mining Vision System Launcher
+2025-11-21 18:57:17,858 - __main__ - INFO - ============================================================
+2025-11-21 18:57:17,914 - __main__ - INFO - ✅ opencv-python is available
+2025-11-21 18:57:18,381 - __main__ - INFO - ✅ ultralytics is available
+2025-11-21 18:57:18,382 - __main__ - INFO - ✅ numpy is available
+2025-11-21 18:57:18,383 - __main__ - INFO - ✅ pyttsx3 is available
+2025-11-21 18:57:18,605 - __main__ - INFO - ✅ google-generativeai is available
+2025-11-21 18:57:18,606 - __main__ - INFO - ✅ websockets is available
+2025-11-21 18:57:18,606 - __main__ - INFO - 🔧 Checking environment configuration...
+2025-11-21 18:57:18,606 - __main__ - INFO - ✅ Gemini API key configured (length: 39)
+2025-11-21 18:57:19,358 - __main__ - INFO - ✅ Camera is available
+2025-11-21 18:57:19,409 - __main__ - INFO - 🚗 Starting mock ESP32 server...
+2025-11-21 18:57:19,410 - __main__ - INFO - ✅ Mock ESP32 server started on ws://localhost:8080/esp32
+2025-11-21 18:57:19,410 - mock_esp32 - INFO - 🚀 Starting Enhanced Mock ESP32 server on localhost:8080
+2025-11-21 18:57:19,415 - websockets.server - INFO - server listening on [::1]:8080
+2025-11-21 18:57:19,415 - websockets.server - INFO - server listening on 127.0.0.1:8080
+2025-11-21 18:57:19,415 - mock_esp32 - INFO - ✅ Enhanced Mock ESP32 server running on ws://localhost:8080/esp32
+2025-11-21 18:57:19,415 - mock_esp32 - INFO - 🎮 Server capabilities:
+2025-11-21 18:57:19,415 - mock_esp32 - INFO -    - Enhanced navigation commands
+2025-11-21 18:57:19,415 - mock_esp32 - INFO -    - Obstacle avoidance simulation
+2025-11-21 18:57:19,415 - mock_esp32 - INFO -    - Real-time vehicle state tracking
+2025-11-21 18:57:19,415 - mock_esp32 - INFO -    - Emergency stop protocols
+2025-11-21 18:57:21,411 - __main__ - INFO - 🚀 Initializing Enhanced Mining Vision System...
+2025-11-21 18:57:22,219 - optimized_live_api_vision - INFO - ✅ Camera initialized with optimized settings
+2025-11-21 18:57:22,314 - optimized_live_api_vision - INFO - ✅ YOLO model optimized for fast inference
+2025-11-21 18:57:22,314 - optimized_live_api_vision - INFO - ✅ Gemini AI initialized
+2025-11-21 18:57:23,094 - optimized_live_api_vision - INFO - ✅ TTS engine initialized
+2025-11-21 18:57:23,094 - __main__ - INFO - 🎥 Vision system initialized successfully
+2025-11-21 18:57:23,094 - __main__ - INFO - 📊 Performance optimizations:
+2025-11-21 18:57:23,094 - __main__ - INFO -    - Target FPS: 20
+2025-11-21 18:57:23,094 - __main__ - INFO -    - Frame skip: 1
+2025-11-21 18:57:23,094 - __main__ - INFO -    - Detection confidence: 0.5
+2025-11-21 18:57:23,094 - __main__ - INFO -    - Gemini call interval: 0.5s
+2025-11-21 18:57:23,094 - __main__ - INFO - 
+2025-11-21 18:57:23,094 - __main__ - INFO - 🎮 Controls:
+2025-11-21 18:57:23,094 - __main__ - INFO -    - Press 'q' to quit
+2025-11-21 18:57:23,094 - __main__ - INFO -    - System will provide audio feedback
+2025-11-21 18:57:23,094 - __main__ - INFO - ============================================================
+2025-11-21 18:57:23,094 - optimized_live_api_vision - INFO - 🚀 Starting enhanced mining vision system with AI path planning...
+2025-11-21 18:57:23,095 - optimized_live_api_vision - INFO - 🔌 Initializing ESP32 controller...
+2025-11-21 18:57:23,095 - enhanced_esp32_controller - INFO - 🔌 Connecting to ESP32 at ws://localhost:8080/esp32
+2025-11-21 18:57:23,098 - websockets.server - INFO - connection open
+2025-11-21 18:57:23,098 - websockets.server - ERROR - connection handler failed
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/websockets/asyncio/server.py", line 376, in conn_handler
+    await self.handler(connection)
+          ~~~~~~~~~~~~^^^^^^^^^^^^
+TypeError: MockESP32Server.handle_client() missing 1 required positional argument: 'path'
+2025-11-21 18:57:23,098 - enhanced_esp32_controller - INFO - ✅ Connected to ESP32
+2025-11-21 18:57:23,098 - enhanced_esp32_controller - ERROR - ❌ Failed to send command: received 1011 (internal error); then sent 1011 (internal error)
+2025-11-21 18:57:23,098 - optimized_live_api_vision - INFO - ✅ ESP32 controller connected
+2025-11-21 18:57:23,136 - optimized_live_api_vision - INFO - 📡 ESP32 Command (offline): {
+  "command": "EMERGENCY_STOP",
+  "speed": 0.0,
+  "direction": 0.0,
+  "duration": Infinity,
+  "timestamp": 1763744243.1366131
+}
+2025-11-21 18:57:23,136 - optimized_live_api_vision - INFO - 🧭 EMERGENCY_STOP | Speed: 0.0 | Direction: 0.0° | EMERGENCY: person detected
+2025-11-21 18:57:48,056 - optimized_live_api_vision - INFO - 📡 ESP32 Command (offline): {
+  "command": "NORMAL_FORWARD",
+  "speed": 1.2,
+  "direction": 0.0,
+  "duration": 2.0,
+  "timestamp": 1763744268.056546
+}
+2025-11-21 18:57:48,056 - optimized_live_api_vision - INFO - 🧭 NORMAL_FORWARD | Speed: 1.2 | Direction: 0.0° | Path clear, proceeding forward
+2025-11-21 18:57:48,254 - optimized_live_api_vision - INFO - 📡 ESP32 Command (offline): {
+  "command": "EMERGENCY_STOP",
+  "speed": 0.0,
+  "direction": 0.0,
+  "duration": Infinity,
+  "timestamp": 1763744268.254061
+}
+2025-11-21 18:57:48,254 - optimized_live_api_vision - INFO - 🧭 EMERGENCY_STOP | Speed: 0.0 | Direction: 0.0° | EMERGENCY: person detected
+2025-11-21 18:57:48,322 - optimized_live_api_vision - INFO - 📡 ESP32 Command (offline): {
+  "command": "NORMAL_FORWARD",
+  "speed": 1.2,
+  "direction": 0.0,
+  "duration": 2.0,
+  "timestamp": 1763744268.3227751
+}
+2025-11-21 18:57:48,322 - optimized_live_api_vision - INFO - 🧭 NORMAL_FORWARD | Speed: 1.2 | Direction: 0.0° | Path clear, proceeding forward
+2025-11-21 18:57:50,389 - optimized_live_api_vision - INFO - 📡 ESP32 Command (offline): {
+  "command": "NORMAL_FORWARD",
+  "speed": 1.2,
+  "direction": 0.0,
+  "duration": 2.0,
+  "timestamp": 1763744270.3889961
+}
+2025-11-21 18:57:50,389 - optimized_live_api_vision - INFO - 🧭 NORMAL_FORWARD | Speed: 1.2 | Direction: 0.0° | Path clear, proceeding forward
+2025-11-21 18:57:52,418 - optimized_live_api_vision - INFO - 📡 ESP32 Command (offline): {
+  "command": "NORMAL_FORWARD",
+  "speed": 1.2,
+  "direction": 0.0,
+  "duration": 2.0,
+  "timestamp": 1763744272.418537
+}
+2025-11-21 18:57:52,418 - optimized_live_api_vision - INFO - 🧭 NORMAL_FORWARD | Speed: 1.2 | Direction: 0.0° | Path clear, proceeding forward
+2025-11-21 18:57:52,620 - optimized_live_api_vision - INFO - 📡 ESP32 Command (offline): {
+  "command": "EMERGENCY_STOP",
+  "speed": 0.0,
+  "direction": 0.0,
+  "duration": Infinity,
+  "timestamp": 1763744272.6203
+}
+2025-11-21 18:57:52,620 - optimized_live_api_vision - INFO - 🧭 EMERGENCY_STOP | Speed: 0.0 | Direction: 0.0° | EMERGENCY: person detected
+2025-11-21 18:57:52,682 - optimized_live_api_vision - INFO - 📡 ESP32 Command (offline): {
+  "command": "NORMAL_FORWARD",
+  "speed": 1.2,
+  "direction": 0.0,
+  "duration": 2.0,
+  "timestamp": 1763744272.682959
+}
+2025-11-21 18:57:52,683 - optimized_live_api_vision - INFO - 🧭 NORMAL_FORWARD | Speed: 1.2 | Direction: 0.0° | Path clear, proceeding forward
+2025-11-21 18:57:52,817 - optimized_live_api_vision - INFO - 📡 ESP32 Command (offline): {
+  "command": "EMERGENCY_STOP",
+  "speed": 0.0,
+  "direction": 0.0,
+  "duration": Infinity,
+  "timestamp": 1763744272.8175511
+}
+2025-11-21 18:57:52,817 - optimized_live_api_vision - INFO - 🧭 EMERGENCY_STOP | Speed: 0.0 | Direction: 0.0° | EMERGENCY: person detected
+2025-11-21 18:57:59,182 - optimized_live_api_vision - INFO - 🛑 Shutting down mining vision system...
+2025-11-21 18:57:59,182 - enhanced_esp32_controller - INFO - 🔌 Disconnecting from ESP32
+2025-11-21 18:57:59,182 - enhanced_esp32_controller - WARNING - 🚨 EMERGENCY STOP ACTIVATED
+2025-11-21 18:57:59,182 - enhanced_esp32_controller - WARNING - ⚠️ Not connected to ESP32
+2025-11-21 18:57:59,217 - optimized_live_api_vision - INFO - ✅ Cleanup completed

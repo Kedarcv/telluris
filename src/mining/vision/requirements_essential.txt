@@ -1,0 +1,22 @@
+# Essential Dependencies for Live API Mining Vision System
+
+# Core AI/ML Libraries (most are already installed)
+torch>=2.0.0
+torchvision>=0.15.0
+ultralytics>=8.0.0
+numpy>=1.24.0
+opencv-python>=4.8.0
+Pillow>=10.0.0
+
+# Google Gemini AI API (already installed)
+google-generativeai>=0.3.0
+
+# Audio Processing - Essential Only
+pyttsx3>=2.90
+pydub>=0.25.1
+
+# WebSocket Communication
+websocket-client>=1.6.0
+
+# Python Environment
+python-dotenv>=1.0.0

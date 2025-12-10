@@ -1,0 +1,23 @@
+# Mining Vehicle Vision System Requirements
+# Install with: pip install -r requirements.txt
+
+# Computer Vision
+opencv-python>=4.8.0
+ultralytics>=8.0.0
+numpy>=1.24.0
+
+# Google Gemini AI
+google-generativeai>=0.3.0
+
+# Communication
+websockets>=11.0
+asyncio
+
+# Utilities
+Pillow>=9.5.0
+matplotlib>=3.7.0
+
+# Optional: For advanced features
+# torch>=2.0.0  # If you want to use custom YOLO models
+# torchvision>=0.15.0
+# scipy>=1.10.0  # For advanced image processing

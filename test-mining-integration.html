@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mining Vehicle WebSocket Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #1a1a1a;
+            color: #fff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .connected {
+            background: #4CAF50;
+        }
+        .disconnected {
+            background: #f44336;
+        }
+        .telemetry {
+            background: #2a2a2a;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #1976D2;
+        }
+        .e-stop {
+            background: #f44336;
+        }
+        .e-stop:hover {
+            background: #d32f2f;
+        }
+        .log {
+            background: #2a2a2a;
+            padding: 10px;
+            height: 300px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        .log-entry {
+            margin: 2px 0;
+        }
+        .log-sent {
+            color: #4CAF50;
+        }
+        .log-received {
+            color: #2196F3;
+        }
+        .log-error {
+            color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mining Vehicle WebSocket Test</h1>
+        
+        <div id="status" class="status disconnected">
+            Status: Disconnected
+        </div>
+        
+        <div class="controls">
+            <h2>Connection</h2>
+            <button onclick="connect()">Connect</button>
+            <button onclick="disconnect()">Disconnect</button>
+        </div>
+        
+        <div class="telemetry" id="telemetry">
+            <h3>Telemetry</h3>
+            <pre id="telemetryData">No telemetry data yet</pre>
+        </div>
+        
+        <div class="controls">
+            <h2>Movement Commands</h2>
+            <button onclick="sendDrive(1, 0)">Forward</button>
+            <button onclick="sendDrive(-1, 0)">Backward</button>
+            <button onclick="sendDrive(0, 1)">Turn Left</button>
+            <button onclick="sendDrive(0, -1)">Turn Right</button>
+            <button onclick="sendDrive(0, 0)">Stop</button>
+            <br>
+            <button onclick="sendWaypoint(10, 10)">Go to (10, 10)</button>
+            <button onclick="sendWaypoint(0, 0)">Return to Origin</button>
+            <br>
+            <button class="e-stop" onclick="sendEmergencyStop()">EMERGENCY STOP</button>
+        </div>
+        
+        <div class="log">
+            <h3>Communication Log</h3>
+            <div id="log"></div>
+        </div>
+    </div>
+    
+    <script>
+        let ws = null;
+        let commandId = 0;
+        
+        function updateStatus(connected) {
+            const status = document.getElementById('status');
+            status.className = `status ${connected ? 'connected' : 'disconnected'}`;
+            status.textContent = `Status: ${connected ? 'Connected' : 'Disconnected'}`;
+        }
+        
+        function addLog(message, type = 'info') {
+            const log = document.getElementById('log');
+            const entry = document.createElement('div');
+            entry.className = `log-entry log-${type}`;
+            const timestamp = new Date().toLocaleTimeString();
+            entry.textContent = `[${timestamp}] ${message}`;
+            log.appendChild(entry);
+            log.scrollTop = log.scrollHeight;
+        }
+        
+        function connect() {
+            if (ws && ws.readyState === WebSocket.OPEN) {
+                addLog('Already connected', 'error');
+                return;
+            }
+            
+            ws = new WebSocket('ws://localhost:8080/esp32');
+            
+            ws.onopen = () => {
+                updateStatus(true);
+                addLog('Connected to ESP32', 'sent');
+            };
+            
+            ws.onmessage = (event) => {
+                const data = JSON.parse(event.data);
+                addLog(`Received: ${event.data}`, 'received');
+                
+                if (data.type === 'telemetry') {
+                    updateTelemetry(data.data);
+                }
+            };
+            
+            ws.onerror = (error) => {
+                addLog(`Error: ${error}`, 'error');
+            };
+            
+            ws.onclose = () => {
+                updateStatus(false);
+                addLog('Disconnected from ESP32', 'error');
+            };
+        }
+        
+        function disconnect() {
+            if (ws) {
+                ws.close();
+                ws = null;
+            }
+        }
+        
+        function updateTelemetry(telemetry) {
+            document.getElementById('telemetryData').textContent = JSON.stringify(telemetry, null, 2);
+        }
+        
+        function sendCommand(command) {
+            if (!ws || ws.readyState !== WebSocket.OPEN) {
+                addLog('Not connected', 'error');
+                return;
+            }
+            
+            command.id = `cmd_${++commandId}`;
+            command.timestamp = Date.now();
+            
+            const json = JSON.stringify(command);
+            ws.send(json);
+            addLog(`Sent: ${json}`, 'sent');
+        }
+        
+        function sendDrive(linear, angular) {
+            sendCommand({
+                type: 'drive',
+                linear_mps: linear,
+                angular_rps: angular,
+                duration_s: 5
+            });
+        }
+        
+        function sendWaypoint(x, y) {
+            sendCommand({
+                type: 'waypoint',
+                frame: 'map',
+                x: x,
+                y: y,
+                tolerance_m: 1.0,
+                v_max: 2.0
+            });
+        }
+        
+        function sendEmergencyStop() {
+            sendCommand({
+                type: 'stop',
+                reason: 'Manual emergency stop',
+                emergency: true
+            });
+        }
+        
+        // Auto-connect on load
+        window.onload = () => {
+            connect();
+        };
+        
+        // Clean up on unload
+        window.onbeforeunload = () => {
+            disconnect();
+        };
+    </script>
+</body>
+</html>

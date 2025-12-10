@@ -1,0 +1,56 @@
+# Live API Mining Vision System - Complete Dependencies
+
+# Core AI/ML Libraries
+torch>=2.0.0
+torchvision>=0.15.0
+ultralytics>=8.0.0
+numpy>=1.24.0
+opencv-python>=4.8.0
+Pillow>=10.0.0
+
+# Google Gemini AI API
+google-generativeai>=0.3.0
+
+# Audio Processing
+pyaudio>=0.2.11
+pyttsx3>=2.90
+pydub>=0.25.1
+
+# WebSocket Communication
+websocket-client>=1.6.0
+
+# Async and HTTP
+asyncio-mqtt>=0.11.0
+aiohttp>=3.8.0
+requests>=2.31.0
+
+# ESP32 Communication
+pyserial>=3.5
+
+# Data Processing
+pandas>=2.0.0
+scipy>=1.11.0
+
+# Image Processing Extras
+imageio>=2.31.0
+matplotlib>=3.7.0
+
+# Development and Testing
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Environment Management
+python-dotenv>=1.0.0
+
+# Logging and Utilities
+colorlog>=6.7.0
+tqdm>=4.66.0
+
+# Optional: For advanced audio processing
+librosa>=0.10.0
+soundfile>=0.12.0
+
+# Optional: For video recording/streaming
+av>=10.0.0
+ffmpeg-python>=0.2.0
